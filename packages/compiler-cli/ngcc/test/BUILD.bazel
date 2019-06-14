@@ -56,23 +56,23 @@ ts_library(
     ],
 )
 
-jasmine_node_test(
-    name = "integration",
-    bootstrap = ["angular/tools/testing/init_node_no_angular_spec.js"],
-    data = [
-        "//packages/common:npm_package",
-        "//packages/core:npm_package",
-        "@npm//rxjs",
-    ],
-    tags = [
-        # Disabled in AOT mode because we want ngcc to compile non-AOT Angular packages.
-        "no-ivy-aot",
-    ],
-    deps = [
-        ":integration_lib",
-        "//tools/testing:node_no_angular",
-        "@npm//canonical-path",
-        "@npm//convert-source-map",
-        "@npm//shelljs",
-    ],
-)
+# jasmine_node_test(
+#     name = "integration",
+#     bootstrap = ["angular/tools/testing/init_node_no_angular_spec.js"],
+#     data = [
+#         "//packages/common:npm_package",
+#         "//packages/core:npm_package",
+#         "@npm//rxjs",
+#     ],
+#     tags = [
+#         # Disabled in AOT mode because we want ngcc to compile non-AOT Angular packages.
+#         "no-ivy-aot",
+#     ],
+#     deps = [
+#         ":integration_lib",
+#         "//tools/testing:node_no_angular",
+#         "@npm//canonical-path",
+#         "@npm//convert-source-map",
+#         "@npm//shelljs",
+#     ],
+# )
